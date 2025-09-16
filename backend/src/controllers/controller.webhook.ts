@@ -15,7 +15,7 @@ export const handleStripeWebhook = async (req: Request, res: Response) => {
 
   try {
     event = stripe.webhooks.constructEvent(
-      (req as any).rawBody, // raw body required
+      (req as any).body, // raw body required
       sig,
       process.env.STRIPE_WEBHOOK_SECRET!
     );
@@ -40,7 +40,7 @@ export const handleStripeWebhook = async (req: Request, res: Response) => {
         const invoice = event.data.object as any;
         console.log(
           "💰 Payment succeeded for subscription:",
-          invoice.subscription
+          // invoice.subscription
         );
         // TODO: Update subscription status in DB
         break;

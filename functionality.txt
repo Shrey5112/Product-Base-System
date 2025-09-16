@@ -2,7 +2,7 @@
 
 User registration & login (JWT + cookies).
 
-Role-based access control (user, merchant, admin).
+Role-based access control (user, merchant).
 
 Auth middleware to protect routes.
 
@@ -87,3 +87,5 @@ CORS setup with frontend origin.
 Environment variables handling (dotenv).
 
 ngrok tunneling for webhook testing.
+
+used shadcn ui component
