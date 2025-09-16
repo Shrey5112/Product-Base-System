@@ -1,0 +1,91 @@
+🔹 User Authentication & Authorization
+
+User registration & login (JWT + cookies).
+
+Role-based access control (user, merchant).
+
+Auth middleware to protect routes.
+
+🔹 Product Management (Merchant Only)
+
+Create a product.
+
+List all products.
+
+Update product details.
+
+Delete product.
+
+🔹 Course Management (Merchant Only)
+
+Create a course (with title, description, price, interval, thumbnail).
+
+Fetch course details by ID.
+
+List all courses.
+
+Add/Remove course from cart.
+
+🔹 Cart System
+
+Add product/course to cart.
+
+Remove product/course from cart.
+
+Fetch cart contents (per user).
+
+🔹 Stripe Payment Integration
+
+One-time payments for products (via Checkout).
+
+Subscription payments for courses:
+
+Create subscription session.
+
+Redirect user to Stripe Checkout.
+
+Handle first subscription payment (checkout.session.completed).
+
+Handle recurring payments (invoice.payment_succeeded).
+
+🔹 Stripe Webhooks
+
+Secure webhook endpoint (/webhook).
+
+Raw body handling for signature verification.
+
+Event listeners for:
+
+checkout.session.completed → first payment.
+
+invoice.payment_succeeded → recurring payments.
+
+🔹 Merchant Dashboard
+
+Role-based UI (visible only for merchants).
+
+Create Product button (opens dialog + form).
+
+Create Course button (opens dialog + form).
+
+🔹 Frontend Integration
+
+React + Redux store for state management.
+
+Course detail page with Subscribe button.
+
+Toast notifications for success/error (Sonner).
+
+Stripe Checkout redirection after session creation.
+
+🔹 Other Features
+
+Database connection (MongoDB).
+
+CORS setup with frontend origin.
+
+Environment variables handling (dotenv).
+
+ngrok tunneling for webhook testing.
+
+used shadcn ui component
